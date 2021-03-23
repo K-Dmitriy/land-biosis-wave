@@ -1,0 +1,34 @@
+header {
+  display: none;
+  padding-top: 25px;
+  @media (min-width: 768px) {
+    display: block;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .img-wrap {
+    margin-right: 30px;
+    @media (min-width: 1440px) {
+      margin-right: 40px;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      max-width: 200px;
+      width: 33%;
+      text-align: center;
+      line-height: 19px;
+      @media (min-width: 1440px) {
+        max-width: 280px;
+        font-size: 22px;
+        line-height: 27px;
+      }
+    }
+  }
+}

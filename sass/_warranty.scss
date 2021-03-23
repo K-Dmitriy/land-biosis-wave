@@ -1,0 +1,143 @@
+.warranty {
+  margin-top: -130px;
+  padding-top: 190px;
+  background: 
+    url('../img/warranty-line.svg') bottom no-repeat,
+    url('../img/warranty-girl-m.jpg') top center no-repeat;
+  @media (min-width: 768px) {
+    margin-top: -50px;
+    padding-top: 50px;
+    background: url('../img/warranty-line.svg') bottom no-repeat;
+  }
+  @media (min-width: 1440px) {
+    position: relative;
+    margin-top: -35px;
+    padding-top: 0;
+    background: none;
+    // & > * {
+    //   z-index: 1;
+    //   position: relative;
+    // }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      margin-top: -15px;
+      padding-left: 10vw;
+      background:
+        url('../img/warranty-line.svg') bottom no-repeat,
+        url('../img/warranty-girl-t.jpg') top right no-repeat;
+    }
+    @media (min-width: 1440px) {
+      position: relative;
+      max-width: 1250px;
+      margin-top: 0;
+      padding: 0;
+      // padding-left: 100px;
+      background:
+      // url('../img/warranty-line-copy.svg') bottom no-repeat,
+      url('../img/warranty-girl-d.jpg') top right no-repeat;
+      & > * {
+        z-index: 1;
+        position: relative;
+      }
+      &::before {
+        z-index: 0;
+        position: absolute;
+        content: '';
+        width: 100vw;
+        height: 275px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: url('../img/warranty-line-copy.svg') bottom no-repeat;
+      }
+    }
+  }
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+    @media (min-width: 1440px) {
+      width: 50%;
+    }
+  }
+  h2 {
+    @media (min-width: 1440px) {
+      margin-top: 50px;
+      margin-bottom: 65px;
+    }
+  }
+  &__advantages {
+    margin-bottom: 15px;
+  }
+  .advantage {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    @media (min-width: 1440px) {
+      margin-bottom: 50px;
+      padding-left: 70px;
+      font-size: 24px;
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 20px;
+      left: 0;
+      background: url('../img/warranty-check.svg') no-repeat;
+      @media (min-width: 1440px) {
+        width: 45px;
+        height: 45px;
+        background-size: contain;
+      }
+    }
+  }
+  &__tagline {
+    margin-bottom: 45px;
+    font-size: 18px;
+    line-height: 20px;
+    @media (min-width: 768px) {
+      text-shadow: 0 0 15px #fff;
+    }
+    @media (min-width: 1440px) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+  .button {
+    width: 290px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 75px;
+    color: #ffffff;
+    @media (min-width: 768px) {
+      transform: translateY(25px);
+    }
+  }
+  .img-wrap {
+    order: -1;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      order: 0;
+      margin-left: auto;
+      margin-right: 0;
+      align-self: flex-end;
+    }
+    @media (min-width: 1440px) {
+      width: 50%;
+    }
+  }
+  
+}

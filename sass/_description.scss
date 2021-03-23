@@ -1,0 +1,27 @@
+.description {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  @media (min-width: 1440px) {
+    margin: 80px 0;
+  }
+  p {
+    position: relative;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 24px;
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      width: 4px;
+      height: 100%;
+      left: 0;
+      background-color: $primary-color;
+    }
+  }
+}

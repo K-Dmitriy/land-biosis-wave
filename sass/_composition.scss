@@ -1,0 +1,87 @@
+.composition {
+  counter-reset: slide -1;
+  @media (min-width: 768px) {
+    counter-reset: slide;
+  }
+  @media (min-width: 1440px) {
+    background: url('../img/composition-bg.svg') center center no-repeat;
+    background-size: cover;
+  }
+  .slider {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  .slide {
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      width: 47%;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 1440px) {
+      width: 33%;
+      margin-bottom: 70px;
+      &:nth-child(2n-1) {
+        margin-right: 16%;
+      }
+      &:nth-child(2n) {
+        margin-left: 16%;
+      }
+    }
+  }
+  .pack-wrap {
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+  h3 {
+    min-height: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $primary-color;
+    @media (min-width: 1440px) {
+      min-height: 60px;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.03em;
+    }
+  }
+  .img-wrap {
+    position: relative;
+    padding-top: 20px;
+    text-align: center;
+    &::before {
+      position: absolute;
+      counter-increment: slide;
+      content: '0' counter(slide);
+      width: 100px;
+      height: 50px;
+      top: 0;
+      left: 0;
+      font-weight: bold;
+      font-size: 72px;
+      line-height: 1;
+      color: #C4C4C4;
+    }
+    &:not(:last-child) img {
+      margin: 0 auto;
+      margin-bottom: 25px;
+      border: 6px solid #ABC13A;
+      border-radius: 50%;
+    }
+  }
+  .desc {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}

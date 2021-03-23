@@ -1,0 +1,74 @@
+.seven-days {
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    margin-bottom: 50px;
+  }
+  @media (min-width: 1440px) {
+    margin-bottom: 155px;
+    background: url('../img/seven-days-bg.png') no-repeat;
+  }
+  h2 {
+    text-align: center;
+    @media (min-width: 1440px) {
+      margin-bottom: 70px;
+    }
+    br {
+      display: none;
+      @media (min-width: 375px) {
+        display: block;
+      }
+    }
+  }
+  .text {
+    @media (min-width: 768px) {
+      background: url('../img/seven-days-text-bg.png') center center no-repeat;
+      background-size: contain;
+    }
+    .wrap {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px 15px;
+      text-align: center;
+      background: linear-gradient(180deg, #2299D3 0%, #2997CC 100%);
+      border-radius: 10px;
+      @media (min-width: 768px) {
+        width: 30%;
+      }
+    }
+    &__slogan {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 15px;
+      color: #FEFEFE;
+    }
+    span {
+      font-size: 30px;
+      color: #FEFEFE;
+    }
+    .count {
+      font-weight: 900;
+      font-size: 180px;
+      color: #FEFEFE;
+    }
+    .date {
+      margin-bottom: 25px;
+      font-weight: bold;
+      font-size: 28px;
+      color: #FEFEFE;
+    }
+    .postscript {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 12px;
+      color: #FEFEFE;
+      @media (min-width: 768px) {
+        font-size: 19px;
+        line-height: 19px;
+      }
+      @media (min-width: 1440px) {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}

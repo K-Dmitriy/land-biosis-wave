@@ -1,0 +1,108 @@
+.form {
+  @media (min-width: 600px) {
+    width: 50%;
+  }
+  @media (min-width: 1440px) {
+    width: auto;
+    max-width: 390px;
+  }
+  &__slogan {
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    @media (min-width: 1440px) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 335px;
+    margin: 0 auto;
+    padding: 20px 25px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: $primary-color;
+    @media (min-width: 768px) {
+      max-width: 355px;
+    }
+    @media (min-width: 1440px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      max-width: 390px;
+    }
+    & *:not(select) {
+      color: #ffffff;
+    }
+  }
+  h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    & span {
+      font-weight: 500;
+    }
+  }
+  select,
+  input {
+    margin-bottom: 10px;
+    padding: 15px 25px;
+    font-family: $secondary-font-family;
+    font-weight: 500;
+    font-size: 14px;
+    background: #FFFFFF;
+    border: 0.3px solid #3D3D3D;
+    border-radius: 10px;
+    @media (min-width: 1440px) {
+      margin-bottom: 20px;
+    }
+  }
+  input {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .sale {
+    margin-bottom: 35px;
+    padding: 15px 10px;
+    font-size: 14px;
+    line-height: 20px;
+    border: 1px dashed #FEFEFE;
+    border-radius: 8px;
+    @media (min-width: 1440px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  .subtitle {
+    margin-bottom: 10px;
+    font-family: $secondary-font-family;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    @media (min-width: 1440px) {
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  .timer-box {
+    display: flex;
+    justify-content: space-around;
+  }
+  .timer-num {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 70px;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    color: #E6680C;
+    background: linear-gradient(180deg, #FFFFFF 66.36%, #E5E5E5 100%);
+    border-radius: 4px;
+  }
+}

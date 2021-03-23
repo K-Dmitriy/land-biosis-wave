@@ -1,0 +1,128 @@
+.promo {
+  margin-bottom: 25px;
+  @media (min-width: 768px) {
+    margin-bottom: 50px;
+  }
+  .container {
+    position: relative;
+    // background: url('../img/promo-line.svg') right 40% no-repeat;
+    background-size: 200%;
+    @-moz-document url-prefix() {
+      background: url('../img/promo-line.svg') right 40% no-repeat;
+    }
+    & > * {
+      z-index: 1;
+      position: relative;
+    }
+    &::before {
+      z-index: 0;
+      position: absolute;
+      content: '';
+      width: 100vw;
+      height: 300px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url('../img/promo-line.svg') right 40% no-repeat;
+      @-moz-document url-prefix() {
+        background: none;
+      }
+      // background-size: cover;
+      // background: url('../img/warranty-line-copy.svg') bottom no-repeat;
+    }
+    @media (min-width: 600px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background-size: contain;
+      background-position-y: bottom;
+    }
+    @media (min-width: 1440px) {
+      margin-bottom: 35px;
+      background: url('../img/promo-girl.jpg') 50% 50% no-repeat;
+      background-size: 33%;
+      background-position-y: 50%;
+      @-moz-document url-prefix() {
+        background: url('../img/promo-line.svg') right 40% no-repeat, url('../img/promo-girl.jpg') 50% 50% no-repeat;
+        background-size: contain, 33%;
+        background-position-y: bottom, 50%;
+      }
+      // background: url('../img/promo-line.svg') right 40% no-repeat, url('../img/promo-girl.jpg') 50% 50% no-repeat;
+      // background-size: contain, 33%;
+      // background-position-y: bottom, 50%;
+    }
+  }
+  &__desc {
+    @media (min-width: 600px) {
+      width: 45%;
+    }
+    @media (min-width: 1440px) {
+      width: 60%;
+    }
+  }
+  &__slogan {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 20px;
+    @media (min-width: 768px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    @media (min-width: 1440px) {
+      margin-bottom: 50px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+  ul {
+    margin-bottom: 20px;
+    @media (min-width: 1440px) {
+      margin-bottom: 30px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      position: relative;
+      min-height: 50px;
+      padding-left: 60px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      @media (min-width: 768px) {
+        font-size: 18px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        height: 50px;
+        width: 50px;
+        left: 0;
+      }
+      &.lock::before {
+        background: url('../img/promo-lock.svg') no-repeat;
+      }
+      &.stomach::before {
+        background: url('../img/promo-stomach.svg') no-repeat;
+      }
+      &.smile::before {
+        background: url('../img/promo-smile.svg') no-repeat;
+      }
+      &.leg::before {
+        background: url('../img/promo-leg.svg') no-repeat;
+      }
+    }
+    br {
+      display: none;
+      @media (min-width: 1440px) {
+        display: block;
+      }
+    }
+  }
+  .img-wrap {
+    margin-bottom: 25px;
+  }
+}
